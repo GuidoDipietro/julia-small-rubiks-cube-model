@@ -61,9 +61,7 @@ Function composition is super easy in Julia, just using the `\circ` symbol (this
 
 Now, we should do the same for the remaining 17 face turns..... If we were drunk or silly, that is. 🍻
 
-A better approach is knowing that by the use of just two moves and a rotation we can define every other move and rotation! [^1]
-
-[^1]: Actually, this is achievable by just 2 permutations since the cube group is 2-gen, but let's stick to single moves.
+A better approach is knowing that by the use of just two moves and a rotation we can define every other move and rotation! <sub>Actually, this is achievable by just 2 permutations since the cube group is 2-gen, but let's stick to single moves.</sub>
 
 In this case, I defined the move `U` and the rotation `x` as my "atoms", just as I showed you with the move `R`.  
 
@@ -96,9 +94,7 @@ single_move_string_to_func("F2")(cube)
 
 The name I used was actually `m_to_mf` instead of all that word soup in my example.
 
-That function would simply check if the length of the given string is 2, then if the 2nd element is a `2` it would return the function twice, otherwise thrice, or if the length is `1`, just once.[^2]
-
-[^2]: Which function? The function corresponding to that face turn, retrieved using `getfield`. Defining a dictionary that holds the corresponding function for each move was equally efficient when benchmarked using BenchmarkTools.
+That function would simply check if the length of the given string is 2, then if the 2nd element is a `2` it would return the function twice, otherwise thrice, or if the length is `1`, just once. <sub>Which function? The function corresponding to that face turn, retrieved using `getfield`. Defining a dictionary that holds the corresponding function for each move was equally efficient when benchmarked using BenchmarkTools.</sub>
 
 ```julia
 function m_to_mf(m)
