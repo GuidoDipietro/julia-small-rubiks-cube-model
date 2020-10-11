@@ -157,3 +157,5 @@ You should be.
 ## Thank
 
 _Julia_ for existing, _alg.cubing.net_ for the images, _dillinger.io_ for being a cool Markdown editor, _you_ for the read!
+
+Also, huge thanks to Tao Yu for the Biang Biang noodles he provided.
