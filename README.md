@@ -96,7 +96,7 @@ single_move_string_to_func("F2")(cube)
 
 The name I used was actually `m_to_mf` instead of all that word soup in my example.
 
-That function would simply check if the length of the given string is `2`, in which case it would return the function twice, otherwise thrice, or if the length is `1`, just once.[^2]
+That function would simply check if the length of the given string is 2, then if the 2nd element is a `2` it would return the function twice, otherwise thrice, or if the length is `1`, just once.[^2]
 
 [^2]: Which function? The function corresponding to that face turn, retrieved using `getfield`. Defining a dictionary that holds the corresponding function for each move was equally efficient when benchmarked using BenchmarkTools.
 
@@ -107,7 +107,7 @@ function m_to_mf(m)
 end
 ```
 
-The "double ternary operator" looks a bit strange, but I decided this usage of it was simple enough to understand, so I left it like that.
+The "double ternary operator" looks a bit strange, but I decided this usage of it was simple enough to understand, so I left it like that. Oh also, remember that in Julia indexing begins in `1` rather than in `0`.
 
 Note that this doesn't actually check if a move is a prime (like `R'`), but just assumes that if the move is of length 2 and the second character isn't a `2`, then it has to be a `'`.
 
