@@ -32,6 +32,22 @@ cube = (cp, co)
 
 ## Defining the moves
 
+In brief, the Rubik's cube notation is as follows:
+
+| Letter |   Description   |
+|:------:|:---------------:|
+|    R   |    right face   |
+|    U   |     up face     |
+|    F   |    front face   |
+|    L   |    left face    |
+|    D   |    down face    |
+|    B   |    back face    |
+|    x   | whole cube as R |
+|    y   | whole cube as U |
+|    z   | whole cube as F |
+
+The letter on its own means 90 degrees clockwise; adding a prime `'` means 90 degrees counter-clockwise, adding a `2` means 180 degrees.
+
 Each move applies certain permutation to both tuples, then adds the corresponding change in orientation to the second tuple.
 
 For example, the move `R` (a 90 degree clockwise turn of the right face) changes the pieces as follows:
